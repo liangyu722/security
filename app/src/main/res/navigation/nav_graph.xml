@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.carta.myapplication.ui.home.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_AllSecurityFragment"
+            app:destination="@id/all_security_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/all_security_fragment"
+        android:name="com.carta.myapplication.ui.allsecurities.AllSecurityFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/all_security_summary_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.carta.myapplication.ui.detailsecurity.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="securityId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

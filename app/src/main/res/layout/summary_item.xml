@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="securitySummary"
+            type="com.carta.myapplication.ui.model.SecuritySummary" />
+
+        <variable
+            name="viewmodel"
+            type="com.carta.myapplication.ui.SummaryViewModel" />
+
+        <variable
+            name="dateFormatter"
+            type="java.text.DateFormat" />
+
+        <variable
+            name="favVisible"
+            type="boolean" />
+
+        <variable
+            name="chevronVisible"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> viewmodel.onClickSecuritySummary(securitySummary)}"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/company_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{securitySummary.companyName}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintEnd_toStartOf="@id/chevron"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Harmony Circle, Inc." />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="@{String.format(@string/security_summary_title, securitySummary.quantity)}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintEnd_toStartOf="@id/chevron"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/company_text"
+            tools:text="1,540 options" />
+
+        <TextView
+            android:id="@+id/label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{securitySummary.label}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_text"
+            tools:text="CS-200" />
+
+        <View
+            android:id="@+id/vertical_spacer"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/label_text"
+            app:layout_constraintStart_toEndOf="@id/label_text"
+            app:layout_constraintTop_toTopOf="@id/label_text" />
+
+        <TextView
+            android:id="@+id/issue_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{String.format(@string/security_summary_issue_date, dateFormatter.format(securitySummary.issueDate))}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/label_text"
+            app:layout_constraintStart_toEndOf="@id/vertical_spacer"
+            app:layout_constraintTop_toTopOf="@id/label_text"
+            tools:text="Held since 10/08/2018" />
+
+        <ImageView
+            android:id="@+id/star_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewmodel.onClickSecuritySummaryFav(securitySummary, false)}"
+            android:visibility="@{favVisible ? View.VISIBLE : View.GONE}"
+            app:favorite="@{securitySummary}"
+            app:layout_constraintBottom_toBottomOf="@+id/company_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/company_text" />
+
+        <ImageView
+            android:id="@+id/chevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{chevronVisible ? View.VISIBLE : View.GONE}"
+            app:srcCompat="@drawable/ic_chevron_right_24" />
+
+        <TextView
+            android:id="@+id/vesting_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/vesting"
+            android:theme="@style/Theme.Interview.StatusBubble.Blue"
+            android:visibility="@{securitySummary.vesting ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_text"
+            tools:text="Vesting" />
+
+        <TextView
+            android:id="@+id/vested_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/fully_vested"
+            android:theme="@style/Theme.Interview.StatusBubble.Green"
+            android:visibility="@{securitySummary.vesting ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_text"
+            tools:text="Vesting" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

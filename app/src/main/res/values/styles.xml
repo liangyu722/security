@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Interview.StatusBubble">
+        <item name="android:background">@drawable/pill_badge_background</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="Theme.Interview.StatusBubble.Blue">
+        <item name="android:backgroundTint">@color/lightestBlue</item>
+        <item name="android:textColor">@color/darkestBlue</item>
+    </style>
+
+    <style name="Theme.Interview.StatusBubble.Green">
+        <item name="android:backgroundTint">@color/lightestGreen</item>
+        <item name="android:textColor">@color/darkestGreen</item>
+    </style>
+</resources>

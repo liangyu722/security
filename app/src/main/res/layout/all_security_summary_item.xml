@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="securitySummary"
+            type="com.carta.myapplication.ui.model.SecuritySummary" />
+
+        <variable
+            name="viewmodel"
+            type="com.carta.myapplication.ui.SummaryViewModel" />
+
+        <variable
+            name="dateFormatter"
+            type="java.text.DateFormat" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/summary_item"
+            android:id="@+id/buttons"
+            app:favVisible="@{true}"
+            app:chevronVisible="@{false}"
+            app:securitySummary="@{securitySummary}"
+            app:viewmodel="@{viewmodel}"
+            app:dateFormatter="@{dateFormatter}"/>
+
+    </FrameLayout>
+
+</layout>
