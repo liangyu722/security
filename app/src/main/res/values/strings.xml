@@ -2,8 +2,8 @@
     <string name="app_name">Exercise - Securities</string>
     <!-- Fragment Titles -->
     <string name="home_fragment_label">Home</string>
-    <string name="second_fragment_label">Second Fragment</string>
-
+    <string name="second_fragment_label">All Securities</string>
+    <string name="detail_fragment_label">Security Detail</string>
     <!-- Buttons -->
     <string name="view_all">View All</string>
     <string name="previous">Previous</string>

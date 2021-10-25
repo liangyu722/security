@@ -29,17 +29,11 @@ class DefaultSecurityDetailRepository(
             val serverResult = fetchSecurityDetail(securityId)
             if (serverResult is Result.Error) {
                 return@withContext Result.Error(RepositoryLoadingException("Cannot load security from server"))
+            } else {
+                securityCache.addToCache((serverResult as Result.Success).data)
             }
 
-            securityCache.addToCache((serverResult as Result.Success).data)
-
-            val result = securityCache.getSecurityDetail(securityId)?.let {
-                Result.Success(it)
-            } ?: run {
-                Result.Error(RepositoryLoadingException("Cannot load security"))
-            }
-
-            return@withContext result
+            return@withContext serverResult
         }
     }
 

@@ -18,6 +18,7 @@
             android:id="@+id/action_home_fragment_to_detailFragment"
             app:destination="@id/detailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/all_security_fragment"
         android:name="com.carta.myapplication.ui.allsecurities.AllSecurityFragment"
@@ -28,7 +29,7 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.carta.myapplication.ui.detailsecurity.DetailFragment"
-        android:label="DetailFragment">
+        android:label="@string/detail_fragment_label">
         <argument
             android:name="securityId"
             app:argType="integer" />

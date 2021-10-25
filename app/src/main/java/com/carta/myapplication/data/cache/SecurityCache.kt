@@ -15,9 +15,7 @@ class SecurityCache(
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) {
     private val cachedSecuritySummaries: ConcurrentMap<Int, SecuritySummary> = ConcurrentHashMap()
-
     private val cachedSecurityDetail: ConcurrentHashMap<Int, SecurityDetail> = ConcurrentHashMap()
-
     private val securitySummaryChannel =
         ConflatedBroadcastChannel<List<SecuritySummary>>(cachedSecuritySummaries.values.toList())
 
