@@ -3,7 +3,7 @@ package com.carta.myapplication.di.networking
 import com.appham.mockinizer.mockinize
 import com.carta.myapplication.data.networking.SecurityService
 import com.carta.myapplication.data.networking.ServiceFactory
-import com.carta.myapplication.server.CartaBackend
+import com.carta.myapplication.server.MockBackend
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -29,7 +29,7 @@ class ServiceModule {
 
     @Singleton
     @Provides
-    fun providesOkHttp(backend: CartaBackend): OkHttpClient {
+    fun providesOkHttp(backend: MockBackend): OkHttpClient {
         return OkHttpClient.Builder()
             .readTimeout(READ_TIMEOUT_SECONDS, TimeUnit.SECONDS)
             .connectTimeout(CONNECTION_TIMEOUT_SECONDS, TimeUnit.SECONDS)

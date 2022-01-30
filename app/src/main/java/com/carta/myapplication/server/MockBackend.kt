@@ -17,7 +17,7 @@ import kotlin.math.max
 import kotlin.math.min
 
 
-class CartaBackend @Inject constructor(){
+class MockBackend @Inject constructor(){
 
     companion object {
         // Requests should take between 0.5 and 2.0 seconds

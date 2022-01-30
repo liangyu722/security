@@ -1,7 +1,7 @@
 package com.carta.myapplication.di
 
 import android.content.Context
-import com.carta.myapplication.CartaApplication
+import com.carta.myapplication.Application
 import com.carta.myapplication.di.networking.ServiceModule
 import com.carta.myapplication.di.presentation.SecuritySummaryModule
 import dagger.BindsInstance
@@ -20,7 +20,7 @@ import javax.inject.Singleton
         ApplicationModule::class,
     ]
 )
-interface ApplicationComponent : AndroidInjector<CartaApplication> {
+interface ApplicationComponent : AndroidInjector<Application> {
     @Component.Factory
     interface Factory {
         fun create(@BindsInstance applicationContext: Context): ApplicationComponent
