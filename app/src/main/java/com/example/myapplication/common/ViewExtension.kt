@@ -1,12 +1,9 @@
 package com.example.myapplication.common
 
 import android.view.View
-import android.widget.TextView
-import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import com.example.myapplication.R
 import com.google.android.material.snackbar.Snackbar
 
 fun View.setupSnackbar(

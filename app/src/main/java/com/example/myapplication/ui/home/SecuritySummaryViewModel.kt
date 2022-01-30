@@ -8,8 +8,6 @@ import com.example.myapplication.data.SecuritySummaryRepository
 import com.example.myapplication.ui.SummaryViewModel
 import com.example.myapplication.ui.model.SecuritySummary
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.take
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

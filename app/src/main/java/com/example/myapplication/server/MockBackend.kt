@@ -1,15 +1,7 @@
 package com.example.myapplication.server
 
 import com.appham.mockinizer.RequestFilter
-import com.appham.mockinizer.mockinize
-import com.google.gson.annotations.SerializedName
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockResponse
-import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
 import java.util.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject

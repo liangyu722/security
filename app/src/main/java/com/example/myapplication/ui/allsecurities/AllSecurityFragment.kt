@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.myapplication.R
 import com.example.myapplication.common.setupSnackbar
 import com.example.myapplication.databinding.AllSecuritySummaryFragmentBinding
-import com.example.myapplication.ui.SummaryViewModel
 import com.example.myapplication.ui.model.SecuritySummary
 import com.google.android.material.snackbar.Snackbar
 import dagger.android.support.DaggerFragment

@@ -2,11 +2,9 @@ package com.example.myapplication.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.FavSummaryItemBinding
-import com.example.myapplication.databinding.SecuritySummaryItemBinding
 import com.example.myapplication.ui.SecuritySummaryDiffCallback
 import com.example.myapplication.ui.SummaryViewModel
 import com.example.myapplication.ui.model.SecuritySummary

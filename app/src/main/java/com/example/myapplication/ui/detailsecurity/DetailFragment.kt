@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
-import com.example.myapplication.ui.detailsecurity.DetailFragmentArgs
 import com.example.myapplication.common.setupSnackbar
 import com.example.myapplication.databinding.SecurityDetailFragmentBinding
 import com.google.android.material.snackbar.Snackbar

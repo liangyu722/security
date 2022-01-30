@@ -1,7 +1,5 @@
 package com.example.myapplication.ui.home
 
-import android.app.Dialog
-import android.app.ProgressDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,7 +12,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.myapplication.R
 import com.example.myapplication.common.setupSnackbar
 import com.example.myapplication.databinding.FragmentHomeBinding
-import com.example.myapplication.ui.SummaryViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.android.support.DaggerFragment
 import java.text.DateFormat

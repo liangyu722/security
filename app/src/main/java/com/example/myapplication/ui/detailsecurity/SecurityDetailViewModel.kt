@@ -1,14 +1,14 @@
 package com.example.myapplication.ui.detailsecurity
 
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.myapplication.R
 import com.example.myapplication.common.Event
 import com.example.myapplication.common.Result
 import com.example.myapplication.data.SecurityDetailRepository
-import com.example.myapplication.data.SecuritySummaryRepository
-import com.example.myapplication.ui.SummaryViewModel
 import com.example.myapplication.ui.model.SecurityDetail
-import com.example.myapplication.ui.model.SecuritySummary
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
