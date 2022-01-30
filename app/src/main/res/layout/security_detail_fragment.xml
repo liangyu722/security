@@ -9,7 +9,7 @@
 
         <variable
             name="viewmodel"
-            type="com.carta.myapplication.ui.detailsecurity.SecurityDetailViewModel" />
+            type="com.example.myapplication.ui.detailsecurity.SecurityDetailViewModel" />
 
         <variable
             name="dateFormatter"

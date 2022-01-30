@@ -9,7 +9,7 @@
 
         <variable
             name="viewmodel"
-            type="com.carta.myapplication.ui.home.SecuritySummaryViewModel" />
+            type="com.example.myapplication.ui.home.SecuritySummaryViewModel" />
 
     </data>
 

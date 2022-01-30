@@ -9,7 +9,7 @@
 
         <variable
             name="securityDetail"
-            type="com.carta.myapplication.ui.model.SecurityDetail" />
+            type="com.example.myapplication.ui.model.SecurityDetail" />
 
         <variable
             name="dateFormatter"

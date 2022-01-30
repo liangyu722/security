@@ -9,7 +9,7 @@
 
         <variable
             name="viewmodel"
-            type="com.carta.myapplication.ui.allsecurities.AllSecuritySummaryViewModel" />
+            type="com.example.myapplication.ui.allsecurities.AllSecuritySummaryViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

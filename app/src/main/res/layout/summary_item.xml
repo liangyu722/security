@@ -9,11 +9,11 @@
 
         <variable
             name="securitySummary"
-            type="com.carta.myapplication.ui.model.SecuritySummary" />
+            type="com.example.myapplication.ui.model.SecuritySummary" />
 
         <variable
             name="viewmodel"
-            type="com.carta.myapplication.ui.SummaryViewModel" />
+            type="com.example.myapplication.ui.SummaryViewModel" />
 
         <variable
             name="dateFormatter"

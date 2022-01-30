@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home_fragment"
-        android:name="com.carta.myapplication.ui.home.HomeFragment"
+        android:name="com.example.myapplication.ui.home.HomeFragment"
         android:label="@string/home_fragment_label"
         tools:layout="@layout/fragment_home">
 
@@ -21,14 +21,14 @@
 
     <fragment
         android:id="@+id/all_security_fragment"
-        android:name="com.carta.myapplication.ui.allsecurities.AllSecurityFragment"
+        android:name="com.example.myapplication.ui.allsecurities.AllSecurityFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/all_security_summary_fragment">
 
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.carta.myapplication.ui.detailsecurity.DetailFragment"
+        android:name="com.example.myapplication.ui.detailsecurity.DetailFragment"
         android:label="@string/detail_fragment_label">
         <argument
             android:name="securityId"
